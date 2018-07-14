@@ -121,7 +121,7 @@ class SponsorshipDiffTest extends PropSpec with PropertyChecks with Matchers wit
           blockDiffEi should produce("unavailable funds")
         }
         assertDiffEi(setupBlocks, block(Seq(insufficientFee)), s) { blockDiffEi =>
-          blockDiffEi should produce("does not exceed minimal value of 100000 WAVES")
+          blockDiffEi should produce("does not exceed minimal value of 100000 COF")
         }
         assertDiffEi(setupBlocks, block(Seq(wavesOverspend)), s) { blockDiffEi =>
           if (wavesOverspend.fee > issue.quantity)
@@ -209,7 +209,7 @@ class SponsorshipDiffTest extends PropSpec with PropertyChecks with Matchers wit
           blockDiffEi should produce("Asset was issued by other address")
         }
         assertDiffEi(setupBlocks, block(Seq(insufficientFee)), s) { blockDiffEi =>
-          blockDiffEi should produce("does not exceed minimal value of 100000000 WAVES: 99999999")
+          blockDiffEi should produce("does not exceed minimal value of 100000000 COF: 99999999")
         }
     }
   }
@@ -242,12 +242,12 @@ class SponsorshipDiffTest extends PropSpec with PropertyChecks with Matchers wit
           blockDiffEi should produce("Asset was issued by other address")
         }
         assertDiffEi(setupBlocks, block(Seq(insufficientFee)), s) { blockDiffEi =>
-          blockDiffEi should produce("does not exceed minimal value of 100000000 WAVES: 99999999")
+          blockDiffEi should produce("does not exceed minimal value of 100000000 COF: 99999999")
         }
     }
   }
 
-  property("sponsor has no WAVES but receives them just in time") {
+  property("sponsor has no COF but receives them just in time") {
     val s = settings(0)
     val setup = for {
       master    <- accountGen
