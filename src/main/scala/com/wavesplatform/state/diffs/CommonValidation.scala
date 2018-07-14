@@ -175,7 +175,7 @@ object CommonValidation {
             restFeeAmount >= 0,
             (),
             GenericError(
-              s"Fee in ${feeAssetId.fold("WAVES")(_.toString)} for ${tx.builder.classTag} does not exceed minimal value of $minimumFee WAVES: $feeAmount")
+              s"Fee in ${feeAssetId.fold("COF")(_.toString)} for ${tx.builder.classTag} does not exceed minimal value of $minimumFee COF: $feeAmount")
           )
         } yield (None, restFeeAmount)
       }
@@ -186,7 +186,7 @@ object CommonValidation {
       if (isSmartToken) {
         val (feeAssetId, feeAmount) = inputFee
         for {
-          _ <- Either.cond(feeAssetId.isEmpty, (), GenericError("Transactions with smart tokens require Waves as fee"))
+          _ <- Either.cond(feeAssetId.isEmpty, (), GenericError("Transactions with smart tokens require Coffeecoin as fee"))
           restFeeAmount = feeAmount - ScriptExtraFee
           _ <- Either.cond(
             restFeeAmount >= 0,
@@ -205,7 +205,7 @@ object CommonValidation {
       if (hasSmartAccountScript) {
         val (feeAssetId, feeAmount) = inputFee
         for {
-          _ <- Either.cond(feeAssetId.isEmpty, (), GenericError("Transactions from scripted accounts require Waves as fee"))
+          _ <- Either.cond(feeAssetId.isEmpty, (), GenericError("Transactions from scripted accounts require Coffeecoin as fee"))
           restFeeAmount = feeAmount - ScriptExtraFee
           _ <- Either.cond(
             restFeeAmount >= 0,
