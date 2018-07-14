@@ -18,5 +18,4 @@
 * sudo apt-get install nano
 * git clone https://github.com/coffeechain-io/node.git
 * cd node
-* sbt packageAll
-* sbt "test:runMain tools.GenesisBlockGenerator src/test/resources/genesis.cof.conf"
+* java -jar coffeechain-all-0.13.3-408-gfd14fc0.jar cof.conf
