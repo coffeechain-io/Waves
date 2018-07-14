@@ -356,7 +356,7 @@ trait TransactionGenBase extends ScriptGen {
     assetName                 <- genBoundedString(IssueTransaction.MinAssetNameLength, IssueTransaction.MaxAssetNameLength)
     description               <- genBoundedString(0, IssueTransaction.MaxDescriptionLength)
     quantity                  <- Gen.choose(Long.MaxValue / 200, Long.MaxValue / 100)
-    decimals                  <- Gen.choose(0: Byte, 8: Byte)
+    decimals                  <- Gen.choose(0: Byte, 3: Byte)
     reissuable                <- Arbitrary.arbitrary[Boolean]
     fee                       <- Gen.choose(MinIssueFee, 2 * MinIssueFee)
     timestamp                 <- positiveLongGen
