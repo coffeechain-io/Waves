@@ -50,7 +50,7 @@ class MatcherSettingsSpecification extends FlatSpec with Matchers {
     settings.orderCleanupInterval should be(5.minute)
     settings.maxOpenOrders should be(1000)
     settings.maxOrdersPerRequest should be(100)
-    settings.priceAssets should be(Seq("WAVES", "8LQW8f7P5d5PZM7GtZEBgaqRPGSzS3DfPuiXrURJ4AJS", "DHgwrRvVyqJsepd32YbBqUeDH4GJ1N984X8QoekjgH8J"))
+    settings.priceAssets should be(Seq("COF", "8LQW8f7P5d5PZM7GtZEBgaqRPGSzS3DfPuiXrURJ4AJS", "DHgwrRvVyqJsepd32YbBqUeDH4GJ1N984X8QoekjgH8J"))
     settings.blacklistedAssets shouldBe Set("a")
     settings.blacklistedNames.map(_.pattern.pattern()) shouldBe Seq("b")
     settings.blacklistedAddresses shouldBe Set("c")
