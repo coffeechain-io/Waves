@@ -1,4 +1,9 @@
 # CoffeeCoin
+<p align="center">
+  <img width="500" height="500" src="https://github.com/mir-one/3D-Assets/blob/master/CoffeeCoin.gif">
+</p>
+
+
 <span style="display:block;text-align:center">[<img src="https://github.com/mir-one/3D-Assets/blob/master/CoffeeCoin.gif">](https://github.com/mir-one/3D-Assets/)</span>
 
 # /root
