@@ -1,6 +1,5 @@
-# Coffeechain
-
-[<img src="https://github.com/mir-one/3D-Assets/blob/master/CoffeeCoin.gif">](https://github.com/mir-one/3D-Assets/)
+# CoffeeCoin
+<span style="display:block;text-align:center">![<img src="https://github.com/mir-one/3D-Assets/blob/master/CoffeeCoin.gif">](https://github.com/mir-one/3D-Assets/)</span>
 
 # /root
 
@@ -16,6 +15,6 @@
 * sudo apt-get update
 * sudo apt-get install sbt
 * sudo apt-get install nano
-* git clone https://github.com/coffeechain-io/node.git
+* git clone https://github.com/coffeecoin-io/node.git
 * cd node
-* java -jar coffeechain-all-0.13.3-408-gfd14fc0.jar cof.conf
+* java -jar coffeecoin-all-0.13.3-408-gfd14fc0.jar cof.conf
